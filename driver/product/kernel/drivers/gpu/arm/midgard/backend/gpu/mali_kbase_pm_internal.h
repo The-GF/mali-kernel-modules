@@ -512,27 +512,6 @@ void kbase_pm_get_dvfs_metrics(struct kbase_device *kbdev,
 			       struct kbasep_pm_metrics *diff);
 #endif /* defined(CONFIG_MALI_DEVFREQ) || defined(CONFIG_MALI_MIDGARD_DVFS) */
 
-#ifdef CONFIG_MALI_MIDGARD_DVFS
-
-/**
- * kbase_platform_dvfs_event - Report utilisation to DVFS code
- *
- * Function provided by platform specific code when DVFS is enabled to allow
- * the power management metrics system to report utilisation.
- *
- * @kbdev:         The kbase device structure for the device (must be a
- *                 valid pointer)
- * @utilisation:   The current calculated utilisation by the metrics system.
- * @util_gl_share: The current calculated gl share of utilisation.
- * @util_cl_share: The current calculated cl share of utilisation per core
- *                 group.
- * Return:         Returns 0 on failure and non zero on success.
- */
-
-int kbase_platform_dvfs_event(struct kbase_device *kbdev, u32 utilisation,
-	u32 util_gl_share, u32 util_cl_share[2]);
-#endif
-
 void kbase_pm_power_changed(struct kbase_device *kbdev);
 
 /**

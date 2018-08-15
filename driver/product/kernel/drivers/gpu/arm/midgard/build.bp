@@ -25,9 +25,6 @@ bob_defaults {
     mali_devfreq: {
         kbuild_options: ["CONFIG_MALI_DEVFREQ=y"],
     },
-    mali_midgard_dvfs: {
-        kbuild_options: ["CONFIG_MALI_MIDGARD_DVFS=n"],
-    },
     mali_debug: {
         kbuild_options: ["CONFIG_MALI_DEBUG=y"],
     },
